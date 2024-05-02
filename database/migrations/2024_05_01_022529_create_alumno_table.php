@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('apellido_alumno', 50);
             $table->string('nombre_alumno', 50);
             $table->string('distrito', 50);
-            $table->unsignedInteger('telefono');
+            $table->string('telefono');
             $table->string('correo', 50);
             $table->unsignedTinyInteger('edad');
             $table->date('fecha_nac');

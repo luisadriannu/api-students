@@ -26,7 +26,7 @@ class StoreStudentRequest extends FormRequest
         return [
           'nombre_alumno' => 'required',
           'apellido_alumno' => 'required',
-          'dni'=> 'required',
+          'dni'=> 'required|unique:alumno,dni',
           'distrito'=> 'required',
           'telefono'=> 'required|numeric|max_digits:10',
           'correo'=> 'required|email|unique:alumno,correo',
