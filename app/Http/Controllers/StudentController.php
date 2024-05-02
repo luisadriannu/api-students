@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 use App\Http\Requests\StoreStudentRequest;
 
@@ -24,6 +25,8 @@ class StudentController extends Controller
       } catch (\Exception $e) {
         DB::rollback();
         
+        Log::error($e->getMessage());
+
         return response()->json(['message' => $e->getMessage()], 500);
       }
         

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('alumno', function (Blueprint $table) {
             $table->id('id_alumno');
-            $table->unsignedInteger('dni')->unique();
+            $table->string('dni')->unique();
             $table->string('apellido_alumno', 50);
             $table->string('nombre_alumno', 50);
             $table->string('distrito', 50);
