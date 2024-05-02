@@ -29,7 +29,7 @@ class StoreStudentRequest extends FormRequest
           'dni'=> 'required',
           'distrito'=> 'required',
           'telefono'=> 'required|numeric|max_digits:10',
-          'correo'=> 'required|email',
+          'correo'=> 'required|email|unique:alumno,correo',
           'edad'=> 'required|numeric|max_digits:2',
           'fecha_nac'=> 'required|date|date_format:Y-m-d',
           'curso' => 'required',
