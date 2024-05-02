@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('correo', 50);
             $table->unsignedTinyInteger('edad');
             $table->date('fecha_nac');
+            $table->string('curso', 255);
+            $table->string('horario', 255);
             // $table->primary(['dni']);
             $table->timestamps();
         });
