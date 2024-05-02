@@ -16,8 +16,6 @@ return new class extends Migration
         Schema::create('docente', function (Blueprint $table) {
             $table->char('id_docente', 5)->primary();
             $table->string('nom_docente', 50);
-            $table->char('id_curso', 5);
-            $table->foreign('id_curso')->references('id_curso')->on('curso');
             $table->timestamps();
         });
     }

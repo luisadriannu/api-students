@@ -17,11 +17,9 @@ return new class extends Migration
             $table->integer('nro_orden')->primary();
             $table->char('id_docente', 5);
             $table->unsignedBigInteger('id_alumno');
-            $table->char('id_curso', 5);
             $table->integer('nota');
             $table->foreign('id_docente')->references('id_docente')->on('docente');
             $table->foreign('id_alumno')->references('id_alumno')->on('alumno');
-            $table->foreign('id_curso')->references('id_curso')->on('curso');
             $table->timestamps();
         });
     }
